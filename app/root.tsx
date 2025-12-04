@@ -31,11 +31,22 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = () => [
-  { name: "robots", content: "index, follow" },
+  { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
   { name: "googlebot", content: "index, follow" },
   { name: "author", content: "Darsh Menon" },
   { name: "theme-color", content: "#7c3aed" },
   { name: "google-site-verification", content: "googleea716b0e0ba79f4e" },
+  { name: "format-detection", content: "telephone=no" },
+  { name: "geo.region", content: "IN-KL" },
+  { name: "geo.placename", content: "Kochi, Kerala, India" },
+  // Default Open Graph Image
+  { property: "og:image", content: "https://darshmenon.github.io/favicon.png" },
+  { property: "og:image:width", content: "512" },
+  { property: "og:image:height", content: "512" },
+  { property: "og:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
+  // Twitter Default Image
+  { name: "twitter:image", content: "https://darshmenon.github.io/favicon.png" },
+  { name: "twitter:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

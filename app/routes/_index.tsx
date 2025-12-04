@@ -176,6 +176,34 @@ export default function Index() {
                 }}
             />
 
+            {/* WebSite Schema with SearchAction */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "name": "Darsh Menon Portfolio",
+                        "alternateName": "Darsh Menon - Robotics Software Engineer",
+                        "url": "https://darshmenon.github.io/",
+                        "description": "Portfolio of Darsh Menon, a Robotics Software Engineer specializing in ROS 2, Computer Vision, and Autonomous Navigation.",
+                        "inLanguage": "en-US",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Darsh Menon"
+                        },
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": {
+                                "@type": "EntryPoint",
+                                "urlTemplate": "https://darshmenon.github.io/?q={search_term_string}"
+                            },
+                            "query-input": "required name=search_term_string"
+                        }
+                    })
+                }}
+            />
+
             <Hero />
 
             <div className="container mx-auto px-6 py-20 space-y-32">
@@ -270,6 +298,48 @@ export default function Index() {
                             className="inline-flex items-center justify-center px-8 py-3 border border-white/10 rounded-full text-sm font-medium text-white hover:bg-white/5 transition-colors"
                         >
                             View All Projects
+                        </Link>
+                    </div>
+                </section>
+
+                {/* Quick Links Section for SEO */}
+                <section>
+                    <div className="flex items-center gap-4 mb-12">
+                        <div className="h-px bg-gradient-to-r from-transparent via-primary-500 to-transparent flex-1" />
+                        <h2 className="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                            Quick Links
+                        </h2>
+                        <div className="h-px bg-gradient-to-r from-transparent via-primary-500 to-transparent flex-1" />
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <Link
+                            to="/about"
+                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
+                        >
+                            <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">About Me</h3>
+                            <p className="text-sm text-gray-400">Experience & Education</p>
+                        </Link>
+                        <Link
+                            to="/projects"
+                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
+                        >
+                            <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">Projects</h3>
+                            <p className="text-sm text-gray-400">ROS 2 & Robotics Work</p>
+                        </Link>
+                        <Link
+                            to="/contact"
+                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
+                        >
+                            <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">Contact</h3>
+                            <p className="text-sm text-gray-400">Get in Touch</p>
+                        </Link>
+                        <Link
+                            to="/robocloud-hub"
+                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
+                        >
+                            <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">RoboCloud</h3>
+                            <p className="text-sm text-gray-400">Robotics Learning Platform</p>
                         </Link>
                     </div>
                 </section>
