@@ -109,8 +109,8 @@ export default function RoboCloudHub() {
                         <div className="flex items-start justify-between mb-4">
                             <span className="text-3xl">{feature.icon}</span>
                             <span className={`px-2 py-1 rounded text-xs font-medium ${feature.status === 'Live'
-                                    ? 'bg-green-500/20 text-green-400'
-                                    : 'bg-yellow-500/20 text-yellow-400'
+                                ? 'bg-green-500/20 text-green-400'
+                                : 'bg-yellow-500/20 text-yellow-400'
                                 }`}>
                                 {feature.status}
                             </span>
@@ -127,7 +127,7 @@ export default function RoboCloudHub() {
             <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                     { label: "Active Users", value: "1,000+", icon: "👥" },
-                    { label: "Learning Modules", value: "50+", icon: "📖" },
+                    { label: "Learning Modules", value: "150+", icon: "📖" },
                     { label: "Community Posts", value: "500+", icon: "💬" },
                     { label: "Quiz Questions", value: "1,000+", icon: "❓" }
                 ].map((stat) => (
