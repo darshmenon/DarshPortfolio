@@ -1,5 +1,6 @@
 import type { MetaFunction } from "react-router";
 import { UIPanel } from "~/components/ui/UIPanel";
+import { BriefcaseIcon, AcademicCapIcon, MapPinIcon, CalendarIcon, CheckCircleIcon, CpuChipIcon, EyeIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
 
 export const meta: MetaFunction = () => {
     return [
@@ -156,18 +157,31 @@ export default function About() {
 
             {/* Experience Section */}
             <section>
-                <h2 className="text-3xl font-bold text-primary-400 mb-12">Professional Experience</h2>
+                <div className="flex items-center gap-4 mb-12">
+                    <div className="p-3 bg-primary-500/10 rounded-xl text-primary-400">
+                        <BriefcaseIcon className="w-8 h-8" />
+                    </div>
+                    <h2 className="text-3xl font-bold text-primary-400">Professional Experience</h2>
+                </div>
+
                 <div className="relative border-l-2 border-primary-500/30 ml-4 md:ml-6 space-y-12">
                     {experiences.map((exp, index) => (
                         <div key={index} className="relative pl-8 md:pl-12">
                             <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-primary-500 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                             <div className="space-y-3">
-                                <div className="text-primary-400 font-mono font-bold text-sm">{exp.period}</div>
+                                <div className="flex items-center gap-2 text-primary-400 font-mono font-bold text-sm">
+                                    <CalendarIcon className="w-4 h-4" />
+                                    {exp.period}
+                                </div>
                                 <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
                                 <div className="flex flex-wrap items-center gap-2">
+                                    <BriefcaseIcon className="w-4 h-4 text-gray-500" />
                                     <span className="text-xl text-primary-300 font-semibold">{exp.company}</span>
                                     <span className="text-gray-500">•</span>
-                                    <span className="text-gray-400">{exp.location}</span>
+                                    <div className="flex items-center gap-1 text-gray-400">
+                                        <MapPinIcon className="w-4 h-4" />
+                                        <span>{exp.location}</span>
+                                    </div>
                                 </div>
                                 <ul className="text-gray-300 leading-relaxed space-y-2">
                                     {exp.description.map((item, i) => (
@@ -185,7 +199,13 @@ export default function About() {
 
             {/* Education Section */}
             <section>
-                <h2 className="text-3xl font-bold text-primary-400 mb-12">Education</h2>
+                <div className="flex items-center gap-4 mb-12">
+                    <div className="p-3 bg-primary-500/10 rounded-xl text-primary-400">
+                        <AcademicCapIcon className="w-8 h-8" />
+                    </div>
+                    <h2 className="text-3xl font-bold text-primary-400">Education</h2>
+                </div>
+
                 <div className="grid grid-cols-1 gap-8">
                     {education.map((edu, index) => (
                         <UIPanel key={index} className="h-full">
@@ -196,17 +216,21 @@ export default function About() {
                                         <div className="text-xl font-semibold text-white">{edu.field}</div>
                                     </div>
                                     <div className="text-right">
-                                        <div className="text-primary-300 font-mono font-bold">{edu.year}</div>
-                                        <div className="text-gray-400">CGPA: {edu.cgpa}</div>
+                                        <div className="inline-flex items-center gap-2 text-primary-300 font-mono font-bold">
+                                            <CalendarIcon className="w-4 h-4" />
+                                            {edu.year}
+                                        </div>
+                                        {edu.cgpa && <div className="text-gray-400">CGPA: {edu.cgpa}</div>}
                                     </div>
                                 </div>
-                                <div className="text-lg text-gray-300">
+                                <div className="flex items-center gap-2 text-lg text-gray-300">
+                                    <MapPinIcon className="w-5 h-5 text-gray-500" />
                                     {edu.institution}, {edu.campus}
                                 </div>
                                 <ul className="text-gray-400 space-y-1">
                                     {edu.highlights.map((highlight, i) => (
                                         <li key={i} className="flex items-start gap-2">
-                                            <span className="text-primary-500 mt-1">•</span>
+                                            <CheckCircleIcon className="w-5 h-5 text-primary-500 mt-0.5" />
                                             <span>{highlight}</span>
                                         </li>
                                     ))}
@@ -222,19 +246,34 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-primary-400 mb-8">Core Competencies</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <UIPanel>
-                        <h3 className="text-lg font-bold text-white mb-4">Robotics & Automation</h3>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="p-2 bg-primary-500/10 rounded-lg text-primary-400">
+                                <CpuChipIcon className="w-6 h-6" />
+                            </div>
+                            <h3 className="text-lg font-bold text-white">Robotics & Automation</h3>
+                        </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Expert in ROS 2 ecosystem, including navigation stack, MoveIt 2 for manipulation, Gazebo simulation, and real-time control systems. Experience with industrial robots (UR3/UR5) and mobile platforms.
                         </p>
                     </UIPanel>
                     <UIPanel>
-                        <h3 className="text-lg font-bold text-white mb-4">Computer Vision & AI</h3>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="p-2 bg-primary-500/10 rounded-lg text-primary-400">
+                                <EyeIcon className="w-6 h-6" />
+                            </div>
+                            <h3 className="text-lg font-bold text-white">Computer Vision & AI</h3>
+                        </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Proficient in OpenCV, deep learning frameworks (PyTorch, TensorFlow), object detection, RANSAC algorithms, and point cloud processing. Implementing perception pipelines for autonomous systems.
                         </p>
                     </UIPanel>
                     <UIPanel>
-                        <h3 className="text-lg font-bold text-white mb-4">Software Development</h3>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="p-2 bg-primary-500/10 rounded-lg text-primary-400">
+                                <CodeBracketIcon className="w-6 h-6" />
+                            </div>
+                            <h3 className="text-lg font-bold text-white">Software Development</h3>
+                        </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Full-stack development with Python, C++, TypeScript, React, and Node.js. Strong foundation in system design, API development, database management, and DevOps practices.
                         </p>

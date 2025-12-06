@@ -40,5 +40,53 @@ export const projects: Project[] = [
         tags: ["ROS 2", "MoveIt 2", "Computer Vision", "Industrial Automation"],
         link: "https://github.com/darshmenon/UR3_ROS2_PICK_AND_PLACE",
         github: "https://github.com/darshmenon/UR3_ROS2_PICK_AND_PLACE"
+    },
+    {
+        id: "slam-navigation-system",
+        title: "SLAM Navigation System",
+        description: "Real-time Simultaneous Localization and Mapping (SLAM) implementation for autonomous mobile robots. Utilizes RGB-D cameras and LiDAR data for accurate map generation and localization in dynamic environments.",
+        tags: ["ROS 2", "SLAM", "Navigation2", "Python", "LiDAR"],
+        link: "https://github.com/darshmenon",
+        github: "https://github.com/darshmenon"
+    },
+    {
+        id: "3d-object-detection",
+        title: "3D Object Detection Pipeline",
+        description: "Deep learning-based 3D object detection system for robotic perception. Processes point cloud data to identify and track objects in real-time, enabling safer interaction for autonomous systems.",
+        tags: ["PyTorch", "OpenCV", "Point Cloud", "Computer Vision", "Python"],
+        link: "https://github.com/darshmenon",
+        github: "https://github.com/darshmenon"
+    },
+    {
+        id: "path-planning-suite",
+        title: "Path Planning Algorithm Suite",
+        description: "Comprehensive implementation of advanced path planning algorithms including RRT*, A*, and D*. visualizes algorithm performance and efficiency in complex obstacle environments for mobile robots.",
+        tags: ["C++", "Python", "Algorithms", "ROS 2", "Visualization"],
+        link: "https://github.com/darshmenon",
+        github: "https://github.com/darshmenon"
+    },
+    {
+        id: "trajectory-planner",
+        title: "Robot Arm Trajectory Planner",
+        description: "Custom trajectory planning module for 6-DOF robotic arms. Implements smooth motion constraints and dynamic obstacle avoidance to ensure safe and efficient manipulation tasks.",
+        tags: ["MoveIt 2", "ROS 2", "C++", "Industrial Robotics", "Control Theory"],
+        link: "https://github.com/darshmenon",
+        github: "https://github.com/darshmenon"
+    },
+    {
+        id: "multi-robot-coordination",
+        title: "Multi-Robot Coordination System",
+        description: "Scalable framework for coordinating multiple autonomous robots. Features centralized task allocation, conflict resolution, and peer-to-peer communication for collaborative missions.",
+        tags: ["ROS 2", "Distributed Systems", "Python", "WebSockets", "Swarm Robotics"],
+        link: "https://github.com/darshmenon",
+        github: "https://github.com/darshmenon"
+    },
+    {
+        id: "sensor-fusion-framework",
+        title: "Sensor Fusion Framework",
+        description: "Robust sensor fusion architecture combining IMU, Odometry, and Vision data using Extended Kalman Filters (EKF). enhancing state estimation accuracy for autonomous reliable navigation.",
+        tags: ["Sensor Fusion", "Kalman Filter", "C++", "ROS 2", "State Estimation"],
+        link: "https://github.com/darshmenon",
+        github: "https://github.com/darshmenon"
     }
 ];

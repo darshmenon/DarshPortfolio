@@ -34,6 +34,15 @@ export const meta: MetaFunction = () => {
     ];
 };
 
+import { UserIcon, BriefcaseIcon, EnvelopeIcon, CpuChipIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
+
+// Helper function to pick an icon based on tags
+const getProjectIcon = (tags: string[]) => {
+    if (tags.some(t => t.includes('ROS') || t.includes('Robotics'))) return <CpuChipIcon className="w-8 h-8" />;
+    if (tags.some(t => t.includes('React') || t.includes('Web'))) return <CodeBracketIcon className="w-8 h-8" />;
+    return <BriefcaseIcon className="w-8 h-8" />;
+};
+
 export default function Index() {
     return (
         <div className="min-h-screen">
@@ -250,9 +259,14 @@ export default function Index() {
                             <UIPanel key={project.id} noPadding className="group h-full flex flex-col">
                                 <div className="p-8 flex-1">
                                     <div className="flex justify-between items-start mb-4">
-                                        <h3 className="text-2xl font-bold text-white group-hover:text-primary-400 transition-colors">
-                                            {project.title}
-                                        </h3>
+                                        <div className="flex items-center gap-3">
+                                            <div className="p-2 rounded-lg bg-primary-500/10 text-primary-400 group-hover:bg-primary-500/20 transition-colors">
+                                                {getProjectIcon(project.tags)}
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-white group-hover:text-primary-400 transition-colors">
+                                                {project.title}
+                                            </h3>
+                                        </div>
                                         <a
                                             href={project.github}
                                             target="_blank"
@@ -315,29 +329,41 @@ export default function Index() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <Link
                             to="/about"
-                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
+                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group flex flex-col items-center"
                         >
+                            <div className="p-3 bg-primary-500/10 rounded-full text-primary-400 mb-4 group-hover:scale-110 transition-transform">
+                                <UserIcon className="w-6 h-6" />
+                            </div>
                             <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">About Me</h3>
                             <p className="text-sm text-gray-400">Experience & Education</p>
                         </Link>
                         <Link
                             to="/projects"
-                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
+                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group flex flex-col items-center"
                         >
+                            <div className="p-3 bg-primary-500/10 rounded-full text-primary-400 mb-4 group-hover:scale-110 transition-transform">
+                                <BriefcaseIcon className="w-6 h-6" />
+                            </div>
                             <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">Projects</h3>
                             <p className="text-sm text-gray-400">ROS 2 & Robotics Work</p>
                         </Link>
                         <Link
                             to="/contact"
-                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
+                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group flex flex-col items-center"
                         >
+                            <div className="p-3 bg-primary-500/10 rounded-full text-primary-400 mb-4 group-hover:scale-110 transition-transform">
+                                <EnvelopeIcon className="w-6 h-6" />
+                            </div>
                             <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">Contact</h3>
                             <p className="text-sm text-gray-400">Get in Touch</p>
                         </Link>
                         <Link
                             to="/robocloud-hub"
-                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
+                            className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group flex flex-col items-center"
                         >
+                            <div className="p-3 bg-primary-500/10 rounded-full text-primary-400 mb-4 group-hover:scale-110 transition-transform">
+                                <CpuChipIcon className="w-6 h-6" />
+                            </div>
                             <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">RoboCloud</h3>
                             <p className="text-sm text-gray-400">Robotics Learning Platform</p>
                         </Link>

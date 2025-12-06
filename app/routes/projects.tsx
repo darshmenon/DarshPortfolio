@@ -27,6 +27,15 @@ export const meta: MetaFunction = () => {
     ];
 };
 
+import { CodeBracketIcon, CpuChipIcon, CubeTransparentIcon } from "@heroicons/react/24/outline";
+
+// Helper function to pick an icon based on tags
+const getProjectIcon = (tags: string[]) => {
+    if (tags.some(t => t.includes('ROS') || t.includes('Robotics'))) return <CpuChipIcon className="w-8 h-8" />;
+    if (tags.some(t => t.includes('React') || t.includes('Web'))) return <CodeBracketIcon className="w-8 h-8" />;
+    return <CubeTransparentIcon className="w-8 h-8" />;
+};
+
 export default function Projects() {
     return (
         <div className="container mx-auto px-6 py-12 space-y-12">
@@ -74,9 +83,14 @@ export default function Projects() {
                     <UIPanel key={project.id} noPadding className="group h-full flex flex-col">
                         <div className="p-8 flex-1">
                             <div className="flex justify-between items-start mb-4">
-                                <h3 className="text-2xl font-bold text-white group-hover:text-primary-400 transition-colors">
-                                    {project.title}
-                                </h3>
+                                <div className="flex items-center gap-3">
+                                    <div className="p-2 rounded-lg bg-primary-500/10 text-primary-400 group-hover:bg-primary-500/20 transition-colors">
+                                        {getProjectIcon(project.tags)}
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-white group-hover:text-primary-400 transition-colors">
+                                        {project.title}
+                                    </h3>
+                                </div>
                                 <div className="flex gap-4">
                                     {project.github && (
                                         <a

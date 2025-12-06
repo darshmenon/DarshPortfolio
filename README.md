@@ -1,10 +1,10 @@
 # Darsh Menon | Professional Portfolio
 
-🚀 **Live Site:** [https://darshmenon.github.io/DarshPortfolio/](https://darshmenon.github.io/DarshPortfolio/)
+**Live Site:** [https://darshmenon.github.io/DarshPortfolio/](https://darshmenon.github.io/DarshPortfolio/)
 
 A modern, professional portfolio website built with React Router, TypeScript, and TailwindCSS.
 
-## 👨‍💻 About Me
+## About Me
 
 I'm **Darsh Menon**, a Robotics Software Engineer at Asimov Robotics, specializing in:
 - ROS 2 & Autonomous Navigation
@@ -14,7 +14,7 @@ I'm **Darsh Menon**, a Robotics Software Engineer at Asimov Robotics, specializi
 
 **Education:** B.E. (Hons) Mechanical Engineering, BITS Pilani Goa
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** React Router v7
 - **Language:** TypeScript
@@ -22,17 +22,17 @@ I'm **Darsh Menon**, a Robotics Software Engineer at Asimov Robotics, specializi
 - **Animation:** Framer Motion
 - **Deployment:** GitHub Pages
 
-## 📋 Features
+## Features
 
-- ✅ Responsive design for all devices
-- ✅ Comprehensive SEO optimization
-- ✅ JSON-LD structured data for rich snippets
-- ✅ Open Graph & Twitter Card meta tags
-- ✅ Sitemap.xml & robots.txt
-- ✅ Fast static site generation
-- ✅ Professional UI with modern animations
+- Responsive design for all devices
+- Comprehensive SEO optimization
+- JSON-LD structured data for rich snippets
+- Open Graph & Twitter Card meta tags
+- Sitemap.xml & robots.txt
+- Fast static site generation
+- Professional UI with modern animations
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
 # Install dependencies
@@ -45,7 +45,7 @@ npm run dev
 npm run build
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── app/
@@ -57,17 +57,17 @@ npm run build
 └── vite.config.ts       # Vite configuration
 ```
 
-## 📞 Contact
+## Contact
 
 - **Email:** darshmenon02@gmail.com
 - **LinkedIn:** [linkedin.com/in/darsh-menon](https://linkedin.com/in/darsh-menon)
 - **GitHub:** [github.com/darshmenon](https://github.com/darshmenon)
 - **Twitter:** [@darsh_menon](https://x.com/darsh_menon)
 
-## 📄 License
+## License
 
 MIT License © 2024 Darsh Menon
 
 ---
 
-Built with ❤️ using React Router
+Built with React Router
