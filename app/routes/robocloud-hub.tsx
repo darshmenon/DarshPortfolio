@@ -24,7 +24,7 @@ export const meta: MetaFunction = () => {
 const features = [
     {
         title: "Learning Paths",
-        description: "Structured courses and tutorials for mastering ROS 2, DSA, computer vision, and autonomous navigation. From beginner to advanced levels.",
+        description: "Interactive lessons, structured courses, and tutorials for mastering ROS 2, DSA, computer vision, and autonomous navigation.",
         status: "Live",
         icon: "📚"
     },
@@ -127,7 +127,7 @@ export default function RoboCloudHub() {
             <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                     { label: "Active Users", value: "1,000+", icon: "👥" },
-                    { label: "Robotics & DSA Modules", value: "150+", icon: "📖" },
+                    { label: "Robotics & DSA Modules", value: "250+", icon: "📖" },
                     { label: "Community Posts", value: "500+", icon: "💬" },
                     { label: "Quiz Questions", value: "1,000+", icon: "❓" }
                 ].map((stat) => (
