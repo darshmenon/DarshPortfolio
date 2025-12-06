@@ -1,15 +1,17 @@
 import type { MetaFunction } from "react-router";
 import { UIPanel } from "~/components/ui/UIPanel";
-import { 
-    BookOpenIcon, 
-    ChatBubbleLeftRightIcon, 
-    BriefcaseIcon, 
-    NewspaperIcon, 
-    ShoppingCartIcon, 
+import {
+    BookOpenIcon,
+    ChatBubbleLeftRightIcon,
+    BriefcaseIcon,
+    NewspaperIcon,
+    ShoppingCartIcon,
     RocketLaunchIcon,
     UsersIcon,
     AcademicCapIcon,
-    QuestionMarkCircleIcon
+    QuestionMarkCircleIcon,
+    SignalIcon,
+    CpuChipIcon
 } from "@heroicons/react/24/outline";
 
 export const meta: MetaFunction = () => {
@@ -100,11 +102,17 @@ export default function RoboCloudHub() {
             />
 
             <section className="space-y-6">
-                <div className="flex items-center gap-4">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
-                        ROBOCLOUD HUB
-                    </h1>
-                    <span className="px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium">
+                <div className="flex flex-col md:flex-row md:items-center gap-4">
+                    <div className="flex items-center gap-3">
+                        <div className="p-3 bg-primary-500/10 rounded-xl text-primary-400">
+                            <CpuChipIcon className="w-10 h-10" />
+                        </div>
+                        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
+                            ROBOCLOUD HUB
+                        </h1>
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium self-start md:self-auto">
+                        <SignalIcon className="w-4 h-4" />
                         Live
                     </span>
                 </div>
