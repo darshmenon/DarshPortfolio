@@ -102,19 +102,30 @@ export default function RoboCloudHub() {
             />
 
             <section className="space-y-6">
-                <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <div className="flex items-center gap-3">
-                        <div className="p-3 bg-primary-500/10 rounded-xl text-primary-400">
-                            <CpuChipIcon className="w-10 h-10" />
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div className="flex flex-col md:flex-row md:items-center gap-4">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-primary-500/10 rounded-xl text-primary-400">
+                                <CpuChipIcon className="w-10 h-10" />
+                            </div>
+                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
+                                ROBOCLOUD HUB
+                            </h1>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
-                            ROBOCLOUD HUB
-                        </h1>
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium self-start md:self-auto">
+                            <SignalIcon className="w-4 h-4" />
+                            Live
+                        </span>
                     </div>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium self-start md:self-auto">
-                        <SignalIcon className="w-4 h-4" />
-                        Live
-                    </span>
+
+                    <a
+                        href="https://robocloud-dashboard.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-base font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/25 self-start md:self-auto"
+                    >
+                        Visit RoboCloud Hub <span className="ml-2">→</span>
+                    </a>
                 </div>
                 <p className="text-xl text-gray-300 max-w-3xl leading-relaxed">
                     The Future of Robotics Collaboration. A unified platform for learning, networking, and career growth
@@ -163,14 +174,6 @@ export default function RoboCloudHub() {
                     RoboCloud Hub is my passion project to create a comprehensive ecosystem for robotics enthusiasts,
                     students, and professionals. Join our growing community today!
                 </p>
-                <a
-                    href="https://robocloud-dashboard.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/25"
-                >
-                    Visit RoboCloud Hub <span className="ml-2">→</span>
-                </a>
             </section>
         </div>
     );
